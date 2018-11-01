@@ -36,6 +36,12 @@ body {
     font-weight: 200;
 }
 
+header {
+    color: white;
+    background-color: black;
+    height: 3em;
+}
+
 /*********** Module styles ******/
 
 .module {}
@@ -70,23 +76,32 @@ body {
     top: 53%;
 }
 
+.logo {
+    font-weight: 200;
+    font-size: 2em;
+}
+
+.logo__span {
+    font-weight: 900;
+}
+
 .navigation {
     display: flex;
-    margin-bottom: 50px;
-    border: 1px solid;
 }
 
-.list {
+.navlist {
     display: flex;
+    line-height: 2.8em;
 }
 
-.list__item {
+.navlist__item {
     list-style: none;
 }
 
-.list__link {
-    text-decoration: none;
+.navlist__link {
     padding: 10px;
+    font-size: 1.4em;
+    color: white;
 }
 
 .form {
