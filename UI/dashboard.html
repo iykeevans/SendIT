@@ -4,71 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 </head>
-<body class="font">
-    <header>
-        <div class="container">
-            <nav class="navigation spacer">
-                <a href="/index.html" class="logo">
-                    Send<span class="logo__span">IT</span>
-                </a>
-                <ul class="navlist">
-                    <li class="navlist__item">
-                        <a href="/login.html" class="navlist__link">Dashboard</a>
-                    </li>
-                    <li class="navlist__item">
-                        <a href="/signup.html" class="navlist__link">
-                            <i style="font-size: 40px; margin-top: 4px;" class="far fa-user-circle"></i>
-                            Jude
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+<body>
+    <nav>
+        <div class="navbar container flexer spacer">
+            <a href="./index.html" class="logo">Send<span class="logo__span">IT</span></a>
+            <label for="toggle" class="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle">
+            <div class="menu">
+                <a href="./dashboard.html" class="menu__link">Dashboard</a>
+                <a href="./profile.html" class="menu__link"><span>Profile</span></a>
+            </div>
         </div>
-    </header>
-    <div class="container flexer spacer">
-        <a href="#"><i class="far fa-plus-square" style=" color: #C4C4C4"></i>Create order</a>
-        <a href="#"><i class="fas fa-search"></i></a>
+	</nav>
+    <div class="container flexer spacer mt">
+        <a href="#" class="dashboard__link border btn btn--curved">
+            <i class="fas fa-plus mr-1"></i>
+            <span class="dashboard__link--span">Create order</span>
+        </a>
+        <input type="text" class="dashboard__search border btn--curved" placeholder="Search">
     </div>
     <div class="container">
-        <h3>recent orders</h3>
-        <div class="flexer spacer">
-            <div class="card">
-                <p>Iyana ipaja to jakande</p>
-                <p>$20</p>
-                <div class="flexer spacer">
-                    <p>10PM</p>
-                    <p>15/10/2010</p>
+        <h3 class="mt">Recent orders</h3>
+        <div class="dashboard__items flexer spacer mt-1">
+            <div class="dashboard__card border">
+                <div class="flexer">
+                    <p class="dashboard__card-title mr-1"><span class="dashboard__card--span">To:</span> Iyana Ipaja</p>
+                    <p class="dashboard__card--time">14:32 PM</p>
                 </div>
-            </div>
-            <div class="card">
-                <p>Iyana ipaja to jakande</p>
-                <p>$20</p>
+                <p style="font-size: 1em;"><span class="dashboard__card--span">From:</span> Lekki</p>  
+                <p class="dashboard__card--price">$1000</p>
                 <div class="flexer spacer">
-                    <p>10PM</p>
-                    <p>15/10/2010</p>
-                </div>
-            </div>
-            <div class="card">
-                <p>Iyana ipaja to jakande</p>
-                <p>$20</p>
-                <div class="flexer spacer">
-                    <p>10PM</p>
-                    <p>15/10/2010</p>
-                </div>
-            </div>
-            <div class="card">
-                <p>Iyana ipaja to jakande</p>
-                <p>$20</p>
-                <div class="flexer spacer">
-                    <p>10PM</p>
-                    <p>15/10/2010</p>
+                    <a href="#edit">Edit</a>
+                    <a href="#show">Show more</a>
                 </div>
             </div>
         </div>
     </div>
+    <!--modal starts here-->
+
+    <!--Modal To Show Details-->
+    <div class="modal" id="show">
+        <div class="modal-area">
+            <p>From: Iyana Ipaja</p>
+            <p>To: Lekki</p>
+            <P>Price: $1000</P>
+            <p>Time: 14:32</p>
+            <a href="#">close</a>
+        </div>
+    </div>
+
+    <!--Modal To Edit Parcel-->
+    <div class="modal" id="edit">
+        <div class="modal-area">
+        <a href="#">Close</a>
+        <form action="POST">
+            <label>From</label><br>
+            <input type="text"class="login__input border mb-1" placeholder="e.g Iyana Ipaja"><br>
+            <label>To</label><br>
+            <input type="text" class="login__input border mb-1" placeholder="e.g Lekki"><br>
+            <label>Weight</label><br>
+            <input type="text" class="login__input border mb-1" placeholder="e.g 20 kg"><br>
+            <button class="login__button border">Edit</button>
+        </form>
+    </div>
+    </div>
+    
 </body>
 </html>
