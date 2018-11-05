@@ -44,19 +44,31 @@ nav {
     line-height: 70px;
 }
 
+.navbar__side-nav,
+.side-nav {
+    font-size: 26px;
+}
+
 .menu__link {
     color: gray;
     font-size: 1.5em;
     margin-left: 1em;
 }
 
-.toggle {
-    font-size: 26px;
-    line-height: 70px;
+.side-nav {
     display: none;
+    height: 100vh;
+    width: 50vw;
+    background-color: white;
 }
-#toggle {
-    display: none;
+
+.side-nav > a {
+    display: block;
+}
+
+.side-nav__close {
+    text-align: right;
+    padding: 0.5em 1em;
 }
 
 /* Logo Styles */
@@ -333,7 +345,7 @@ tr:nth-of-type(even) {
 
     /* navbar */
 
-    .toggle {
+    .side-nav {
         display: block;
     }
 
@@ -373,7 +385,7 @@ tr:nth-of-type(even) {
     }
 
     /* summary */
-    
+
     .summary {
         margin-bottom: 2em;
     }
