@@ -1,0 +1,28 @@
+{
+  "name": "send-it",
+  "version": "1.0.0",
+  "description": "SendIT is a courier service that helps users deliver parcels to different destinations. It provides courier quotes based on weight catgories.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iykeevans/SendIT.git"
+  },
+  "keywords": [
+    "API",
+    "travis",
+    "coveralls",
+    "codeclimate",
+    "send-it",
+    "coveralls",
+    "codeclimate"
+  ],
+  "author": "iykeevans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iykeevans/SendIT/issues"
+  },
+  "homepage": "https://iykeevans.github.io/SendIT/UI/index.html"
+}
