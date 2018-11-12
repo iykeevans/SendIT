@@ -24,5 +24,16 @@
   "bugs": {
     "url": "https://github.com/iykeevans/SendIT/issues"
   },
-  "homepage": "https://iykeevans.github.io/SendIT/UI/index.html"
+  "homepage": "https://iykeevans.github.io/SendIT/UI/index.html",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sourcemaps": "^2.6.4"
+  }
 }
