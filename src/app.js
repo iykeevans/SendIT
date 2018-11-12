@@ -1,6 +1,6 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-const port = process.env.PORT || 8080;
+const express = require('express');
+const bodyParser = require('body-parser');
+const port = process.env.PORT || 5000;
 
 // fire express
 const app = express();
