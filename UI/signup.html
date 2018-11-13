@@ -7,7 +7,7 @@
     <title>Signup</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
-<body>
+<body class="login">
     <nav>
         <div class="navbar container flexer spacer">
             <a href="./index.html" class="logo">Send<span class="logo__span">IT</span></a>
@@ -20,9 +20,9 @@
     </nav>
     
 	<!-- signup starts here -->
-    <section class="login centered">
-        <h2 class="center mt">Sign up</h2>
-        <form action="POST">
+    <section class="centered">
+        <form action="POST" class="login__form">
+            <h2 class="center accent">Sign up</h2>
             <label for="name">Name</label><br>
             <input type="text" name="email" class="login__input border mb-1" placeholder="Joe Ruth"><br>
             <label for="name">Email</label><br>
@@ -32,8 +32,8 @@
             <label for="name">Confirm password</label><br>
             <input type="password" name="cpassword" class="login__input border mb-1" placeholder="Password"><br>
             <button class="login__button border--accent primary accent-bg">Sign up</button>
+            <a href="./login.html" class="login__link center mt-1">Already a member?</a>
 		</form>
-		<a href="./login.html" class="center mt-1">Already a member?</a>
     </section>
 
     <!--side nav-->
