@@ -32,7 +32,6 @@ input {
 /*********** Layout styles ******/
 
 nav {
-    border-bottom: 1px solid #EAEAEB;
     height: 70px;
 }
 
@@ -82,7 +81,7 @@ nav {
 
 .logo__span {
     font-weight: 900;
-    color: #54D17A;
+    color: #660033;
 }
 
 /* Home Styles */
@@ -222,6 +221,10 @@ nav {
     color: #C4C4C4;
 }
 
+.accent-bg {
+    background-color: #660033;
+}
+
 
 /* table rules */
 
@@ -298,7 +301,7 @@ tr:nth-of-type(even) {
 }
 
 .border--accent {
-    border: 1px solid #54D17A;
+    border: 1px solid #660033;
 }
 
 .radius {
