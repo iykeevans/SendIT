@@ -20,7 +20,7 @@
         </div>
 	</nav>
     <div class="container flexer spacer mt">
-        <a href="#" class="dashboard__link border btn btn--curved">
+        <a href="#creator" class="dashboard__link border btn btn--curved">
             <i class="fas fa-plus mr-1"></i>
             <span class="dashboard__link--span">Create order</span>
         </a>
@@ -43,36 +43,73 @@
             </div>
         </div>
     </div>
+
+
     <!--modal starts here-->
 
     <!--Modal To Show Details-->
     <div class="modal" id="show">
         <div class="modal-area">
-            <p>From: Iyana Ipaja</p>
-            <p>To: Lekki</p>
-            <P>Price: $1000</P>
-            <p>Time: 14:32</p>
-            <a href="#">close</a>
+            <a href="#">X</a>
+            <div class="mt-1">
+                <div class="flexer spacer">
+                    <div>
+                        <p style="font-weight: 400">Start Location:</p> 
+                        <p style="font-size: 1.3em">Iyana Ipaja</p>
+                    </div>
+                    
+                    <div>
+                        <p style="font-weight: 400">Destination:</p> 
+                        <p style="font-size: 2em">Ikeja</p>
+                    </div>
+                </div>
+
+                <div class="flexer spacer mt-1">
+                    <div>
+                        <p style="font-weight: 400">Price:</p> 
+                        <p style="font-size: 1.3em">1000</p>
+                    </div>
+
+                    <div>
+                        <p style="font-weight: 400">Time:</p> 
+                        <p style="font-size: 1.3em">14:32</p>
+                    </div>
+                </div>
+                <button class="btn btn--curved mt-1" style="font-size: 1em;">Cancel</button>
+            </div>
         </div>
     </div>
 
     <!--Modal To Edit Parcel-->
     <div class="modal" id="edit">
         <div class="modal-area">
-        <a href="#">Close</a>
-        <form action="POST">
-            <label>From</label><br>
-            <input type="text"class="login__input border mb-1" placeholder="e.g Iyana Ipaja"><br>
-            <label>To</label><br>
-            <input type="text" class="login__input border mb-1" placeholder="e.g Lekki"><br>
-            <label>Weight</label><br>
-            <input type="text" class="login__input border mb-1" placeholder="e.g 20 kg"><br>
-            <button class="login__button border">Edit</button>
+        <a href="#">X</a>
+        <form>
+            <label>Pickup Location</label><br>
+            <input type="text" style="font-size: 1em; padding: 0.2em; width: 265px;" class="border mb-1" placeholder="e.g Iyana Ipaja"><br>
+            <label>Destination</label><br>
+            <input type="text" style="font-size: 1em; padding: 0.2em; width: 265px;" class="border mb-1" placeholder="e.g Lekki"><br>
+            <button style="font-size: 1em;" class="btn border">Edit</button>
         </form>
     </div>
+
+    <div class="modal" id="creator">
+        <div class="modal-area">
+        <a href="#">X</a>
+        <form>
+            <label>Pickup Location</label><br>
+            <input type="text" style="font-size: 1em; padding: 0.2em; width: 265px;" class="border mb-1" placeholder="e.g Iyana Ipaja"><br>
+            <label>Destination</label><br>
+            <input type="text" style="font-size: 1em; padding: 0.2em; width: 265px;" class="border mb-1" placeholder="e.g Lekki"><br>
+            <label>Weight</label><br>
+            <input type="text" style="font-size: 1em; padding: 0.2em; width: 265px;" class="border mb-1" placeholder="e.g Lekki"><br>
+            <label>Package Name</label><br>
+            <input type="text" style="font-size: 1em; padding: 0.2em; width: 265px;" class="border mb-1" placeholder="e.g Lekki"><br>
+            <button style="font-size: 1em;" class="btn border accent-bg">Create Order</button>
+        </form>
     </div>
     
-    <!--side nav-->
+    <!--side-nav-->
     <div class="modal" id="side-nav">
         <div class="side-nav">
             <a href="#" class="side-nav__close">X</a>
