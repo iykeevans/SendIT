@@ -20,13 +20,13 @@
 	</nav>
 	<!-- login starts here -->
     <section>
-        <form action="POST" class="login__form">
+        <form class="login__form">
             <h2 class="center accent">Login</h2>
             <label for="name">Email</label><br>
             <input type="text" name="email" class="login__input border mb-1" placeholder="Joe@domain.com"><br>
             <label for="name">Password</label><br>
             <input type="password" name="password" class="login__input border mb-1" placeholder="Password"><br>
-            <button class="login__button border--accent primary accent-bg">Login</button>
+            <input type="button" class="login__button border--accent primary accent-bg" onclick="window.location.href='./dashboard.html'" value="Login">
             <a href="./signup.html" class="login__link center mt-1">Not Yet Registered?</a>
 		</form>
     </section>
