@@ -1,19 +1,5 @@
 import { writeFileSync } from 'fs';
 
-const getNewId = (array) => {
-  if (array.length > 0) {
-    return array[length - 1].id + 1;
-  }
-  return 1;
-}
-
-const getNewUserId = () => {
-  if (array.length > 0) {
-    return array[array.length - 1].userId + 2;
-  }
-  return 1;
-}
-
 // check if object with id exists
 const checkItemExist = (database, id) => {
   return new Promise((resolve, reject) => {
@@ -49,4 +35,4 @@ const writeJSONFile = (filepath, content) => {
   writeFileSync(filepath, JSON.stringify(content), 'utf8');
 }
 
-export default { getNewId, getNewUserId, checkItemExist, checkUserExist, newDate, newPrice, writeJSONFile };
+export default { checkItemExist, checkUserExist, newDate, newPrice, writeJSONFile };

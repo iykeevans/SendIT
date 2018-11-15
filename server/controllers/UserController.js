@@ -1,12 +1,12 @@
-const userParcels = require('../models/users.model');
+import userParcels from '../models/UserModel';
 
-const users = {};
-
-users.getAll = async (req, res) => {
-  const { id } = req.params;
-  await userParcels.getUserParcels(id)
-  .then(data => res.json(data))
-  .catch(err => res.json(err));
+class users {
+  static async getItems (req, res) {
+    const { id } = req.params;
+    await userParcels.getUserParcels(id)
+    .then(data => res.json(data))
+    .catch(err => res.json(err));
+  };
 };
 
-module.exports = users;
+export default users;

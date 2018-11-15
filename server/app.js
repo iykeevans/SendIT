@@ -12,7 +12,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // use imported routes
-app.get('/', (req, res) => res.json({message: 'welcome to the demo of this API'}));
+//app.get('/', (req, res) => res.json({message: 'welcome to the demo of this API'}));
+app.use(routes)
 
 app.listen(port, () => {
   console.log(`listening to port ${port}`);

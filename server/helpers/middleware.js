@@ -4,7 +4,7 @@ const checkFieldsPost = (req, res, next) => {
   if (startLocation && destination && itemName) {
     next()
   } else {
-    res.status(400).json({ message: 'fields are not good' })
+    res.status(400).json({ message: 'fields are not correct' })
   }
 }
 

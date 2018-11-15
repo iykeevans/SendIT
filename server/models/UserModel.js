@@ -1,5 +1,5 @@
 import db from '../database/database.json';
-import helper from '../validations/helper';
+import helper from '../helpers/helper';
 
 const getUserParcels = (id) => {
   return new Promise((resolve, reject) => {

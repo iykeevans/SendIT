@@ -1,5 +1,6 @@
 import db from '../database/database.json';
 import helper from '../helpers/helper';
+import ids from 'short-id';
 
 const getAllParcels = () => {
   return new Promise((resolve, reject) => {
@@ -24,8 +25,10 @@ const getOneParcel = (id) => {
 
 const insertParcel = (newParcel) => {
   return new Promise((resolve, reject) => {
-    newParcel.id = //add shortId here
-    newParcel.userId = //add shorId here
+    newParcel.id = ids.generate();
+    newParcel.userId = ids.generate();
+    newParcel.price = helper.newPrice();
+    newParcel.status = true;
     newParcel.createdAt = helper.newDate();
     db.push(newParcel);
     resolve(newParcel);
@@ -35,7 +38,7 @@ const insertParcel = (newParcel) => {
 const cancelParcel = (id) => {
   let parcel = db.find(item => {
     return item.id == id;
-  })
+  });
   if(parcel.status === true) {
     parcel.status = false
   } else {
