@@ -9,69 +9,75 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 </head>
 <body>
-    <div class="flexer" style="padding: 2em;">
-        <div class="border" style="width: 30vw;">
-            <div>
-                <img src="./img/user.svg" width="100px" class="centered" height="100px" />
+    <nav>
+        <div class="navbar container flexer spacer">
+            <a href="./index.html" class="logo">Send<span class="logo__span">IT</span></a>
+            <a href="#side-nav" class="navbar__side-nav">&#9776;</a>
+            <div class="menu">
+                <a href="./signup.html" class="menu__link">Admin Profile</a>
+                <a href="./index.html" class="menu__link">Sign out</a>
             </div>
         </div>
-        <div class="border" style="width: 70vw;">
-            <table class="center" id="table">
-            <tr id="table__headrow">
-                <td>Date</td>
-                <td>Quote</td>
-                <td>From</td>
-                <td>TO</td>
-                <td>DISTANCE</td>
-                <td>PRICE</td>
-                <td>STATUS</td>
-            </tr>
-            <tr>
-                <td tableHeadData="Date">01-11-2018</td>
-                <td tableHeadData="Quote">B12345</td>
-                <td tableHeadData="From">Egbeda</td>
-                <td tableHeadData="TO">Eko</td>
-                <td tableHeadData="DISTANCE">12</td>
-                <td tableHeadData="PRICE">$25</td>
-                <td tableHeadData="STATUS">Delivering</td>
-            </tr>
-            <tr>
-                <td tableHeadData="Date">01-11-2018</td>
-                <td tableHeadData="Quote">B12345</td>
-                <td tableHeadData="From">Egbeda</td>
-                <td tableHeadData="TO">Eko</td>
-                <td tableHeadData="DISTANCE">12</td>
-                <td tableHeadData="PRICE">$25</td>
-                <td tableHeadData="STATUS">Delivering</td>
-            </tr>
-            <tr>
-                <td tableHeadData="Date">01-11-2018</td>
-                <td tableHeadData="Quote">B12345</td>
-                <td tableHeadData="From">Egbeda</td>
-                <td tableHeadData="TO">Eko</td>
-                <td tableHeadData="DISTANCE">12</td>
-                <td tableHeadData="PRICE">$25</td>
-                <td tableHeadData="STATUS">Delivering</td>
-            </tr>
-            <tr>
-                <td tableHeadData="Date">01-11-2018</td>
-                <td tableHeadData="Quote">B12345</td>
-                <td tableHeadData="From">Egbeda</td>
-                <td tableHeadData="TO">Eko</td>
-                <td tableHeadData="DISTANCE">12</td>
-                <td tableHeadData="PRICE">$25</td>
-                <td tableHeadData="STATUS">Delivering</td>
-            </tr>
-	    </table>
-        </div>
-    </div>
-    <!--side nav-->
-    <div class="modal" id="side-nav">
-        <div class="side-nav">
-            <a href="#" class="side-nav__close">X</a>
-            <a href="./index.html" class="logo center">Send<span class="logo__span">IT</span></a>
-            <a href="./dashboard.html" class="center mt">Dashboard</a>
-            <a href="./profile.html" class="center mt-1">Profile</a>
+	</nav>
+    <div class="container">
+            <h1 class="mt">PARCEL DELIVERY ORDER</h1>
+            <table class="center mt-1" id="table">
+                <tr id="table__headrow">
+                    <td>Date</td>
+                    <td>Quote</td>
+                    <td>From</td>
+                    <td>TO</td>
+                    <td>DISTANCE</td>
+                    <td>PRICE</td>
+                    <td>STATUS</td>
+                </tr>
+                <tr>
+                    <td tableHeadData="Date">01-11-2018</td>
+                    <td tableHeadData="Quote">B12345</td>
+                    <td tableHeadData="From">Egbeda</td>
+                    <td tableHeadData="TO">Eko</td>
+                    <td tableHeadData="DISTANCE">12</td>
+                    <td tableHeadData="PRICE">$25</td>
+                    <td tableHeadData="STATUS">Delivering | <a href="#edit">Edit</a></td>
+                </tr>
+                <tr>
+                    <td tableHeadData="Date">01-11-2018</td>
+                    <td tableHeadData="Quote">B12345</td>
+                    <td tableHeadData="From">Egbeda</td>
+                    <td tableHeadData="TO">Eko</td>
+                    <td tableHeadData="DISTANCE">12</td>
+                    <td tableHeadData="PRICE">$25</td>
+                    <td tableHeadData="STATUS">Delivering | <a href="#edit">Edit</a></td>
+                </tr>
+                <tr>
+                    <td tableHeadData="Date">01-11-2018</td>
+                    <td tableHeadData="Quote">B12345</td>
+                    <td tableHeadData="From">Egbeda</td>
+                    <td tableHeadData="TO">Eko</td>
+                    <td tableHeadData="DISTANCE">12</td>
+                    <td tableHeadData="PRICE">$25</td>
+                    <td tableHeadData="STATUS">Delivering | <a href="#edit">Edit</a></td>
+                </tr>
+                <tr>
+                    <td tableHeadData="Date">01-11-2018</td>
+                    <td tableHeadData="Quote">B12345</td>
+                    <td tableHeadData="From">Egbeda</td>
+                    <td tableHeadData="TO">Eko</td>
+                    <td tableHeadData="DISTANCE">12</td>
+                    <td tableHeadData="PRICE">$25</td>
+                    <td tableHeadData="STATUS">Delivering | <a href="#edit">Edit</a></td>
+                </tr>
+            </table>
+            <div class="modal" id="edit">
+            <div class="modal-area">
+            <a href="#">X</a>
+            <form>
+                <label>Pickup Location</label><br>
+                <input type="text" style="font-size: 1em; padding: 0.2em; width: 265px;" class="border mb-1" placeholder="e.g Iyana Ipaja"><br>
+                <label>Destination</label><br>
+                <input type="text" style="font-size: 1em; padding: 0.2em; width: 265px;" class="border mb-1" placeholder="e.g Lekki"><br>
+                <button style="font-size: 1em;" class="btn border">Edit</button>
+            </form>
         </div>
     </div>
 </body>
