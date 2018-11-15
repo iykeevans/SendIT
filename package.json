@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
-    "start": "nodemon src/app.js"
+    "start": "nodemon bin/dev.js"
   },
   "repository": {
     "type": "git",
