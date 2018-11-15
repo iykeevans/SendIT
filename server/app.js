@@ -1,5 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import routes from '../server/routes/index';
+
 const port = process.env.PORT || 8080;
 
 // fire express
