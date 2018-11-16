@@ -4,7 +4,7 @@
   "description": "a parcel delivery app",
   "main": "app.js",
   "scripts": {
-    "test": "nyc mocha --require @babel/register server/test/*",
+    "test": "nyc mocha --require @babel/register server/test/* --exit",
     "start": "node bin/dev",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
