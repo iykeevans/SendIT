@@ -4,8 +4,9 @@
   "description": "a parcel delivery app",
   "main": "app.js",
   "scripts": {
-    "test": "mocha --require babel-polyfill --require babel-register server/test/*",
-    "start": "node bin/dev"
+    "test": "nyc mocha --require @babel/register server/test/*",
+    "start": "node bin/dev",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -22,13 +23,14 @@
   },
   "homepage": "https://github.com/iykeevans/SendIT#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0",
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
     "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
     "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
     "supertest": "^3.3.0"
   },
   "dependencies": {
