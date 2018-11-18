@@ -1,0 +1,30 @@
+{
+  "name": "send-it",
+  "version": "1.0.0",
+  "description": "a parcel delivery app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iykeevans/SendIT.git"
+  },
+  "keywords": [
+    "babel",
+    "nodejs"
+  ],
+  "author": "iyke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iykeevans/SendIT/issues"
+  },
+  "homepage": "https://github.com/iykeevans/SendIT#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0"
+  }
+}
