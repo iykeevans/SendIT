@@ -1,5 +1,5 @@
 # SendIT 
-[![Build Status](https://travis-ci.org/iykeevans/SendIT.svg?branch=master)](https://travis-ci.org/iykeevans/SendIT)
+[![Build Status](https://travis-ci.org/iykeevans/SendIT.svg?branch=develop)](https://travis-ci.org/iykeevans/SendIT) [![Coverage Status](https://coveralls.io/repos/github/iykeevans/SendIT/badge.svg?branch=develop)](https://coveralls.io/github/iykeevans/SendIT?branch=develop)
 
 
   
