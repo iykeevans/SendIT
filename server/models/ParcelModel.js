@@ -1,10 +1,14 @@
 import ids from 'shortid';
 
-import db from '../database/db.json';
+import { pool } from '../database/db.js';
 import helper from '../helpers/helper';
 
 
 const getAllParcels = () => new Promise((resolve, reject) => {
+  pool.query('SELECT NOW()', (err, res) => {
+    console.log(err, res)
+    pool.end()
+  });
   if (db.length === 0) {
     reject('No data available');
   }

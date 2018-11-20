@@ -1,4 +1,4 @@
-import db from '../database/db.json';
+import db from '../database/db.js';
 import helper from '../helpers/helper';
 
 const getUserParcels = (id) => {
