@@ -1,5 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import log from 'fancy-log';
+import routes from './routes';
 
 // set port
 const port = process.env.PORT || 8080;
@@ -12,10 +14,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // home end point
-app.get('/', (req, res) => {
-    res.json({message: 'welcome to my API'});
-});
+app.use(routes);
 
-app.listen(port, () => console.log(`app listening on port ${port}`));
+app.listen(port, () => log(`app listening on port ${port}`));
 
 module.exports = app;
