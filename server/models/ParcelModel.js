@@ -1,19 +1,24 @@
 //import ids from 'short-id';
 
 import db from '../database/db.json';
-//import helper from '../helpers/helper';
+import helper from '../helpers/helper';
 
 
-const getAllParcels = () => {
-  return new Promise((resolve, reject) => {
-    if (db.length === 0) {
-      reject({
-        message: 'No data available',
-        status: 404,
-      });
-    }
-    resolve(db);
-  });
+const getAllParcels = () => new Promise((resolve, reject) => {
+  if (db.length === 0) {
+    reject('No data available');
+  }
+  resolve(db);
+});
+
+const getOneParcel = id => new Promise((resolve, reject) => {
+  // check if object with id exists
+  helper.checkItemExist(db, id)
+    .then(data => resolve(data))
+    .catch(err => reject(err));
+});
+
+export default {
+  getAllParcels,
+  getOneParcel,
 };
-
-export default { getAllParcels };
