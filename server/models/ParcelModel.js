@@ -6,7 +6,7 @@ import helper from '../helpers/helper';
 
 const getAllParcels = () => new Promise((resolve, reject) => {
   if (db.length === 0) {
-    reject('No data available');
+    reject(new Error('No data available'));
   }
   resolve(db);
 });
