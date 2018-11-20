@@ -4,7 +4,7 @@ const app = require('../app');
 
 describe('Test for App.js', () => {
   it('it should return success code 200', () => {
-    request(app).get('/')
+    request(app).get('/api/v1')
       .then((res) => {
         expect(res.statusCode).to.equal(200);
         expect(res.body).to.be.an('object');
