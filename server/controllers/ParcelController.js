@@ -38,6 +38,20 @@ class Parcels {
         }
       });
   }
+
+  // change parcel item status
+  static cancelItem(req, res) {
+    const { id } = req.params;
+    ParcelModel.cancelParcel(id)
+      .then(data => res.json(data))
+      .catch((err) => {
+        if (err.status) {
+          res.status(err.status).json({ message: err.message });
+        } else {
+          res.status(500).json({ message: err.message });
+        }
+      });
+  }
 }
 
 module.exports = Parcels;

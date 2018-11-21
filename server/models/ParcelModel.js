@@ -28,10 +28,21 @@ const insertParcel = (newParcel) => {
     db.push(newParcel);
     resolve(newParcel);
   });
+};
+
+const cancelParcel = (id) => {
+  return new Promise((resolve, reject) => {
+    const parcel = db.find(item => item.id === id);
+    if (parcel.status === true) {
+      resolve(parcel.status = false);
+    }
+    reject(new Error('already cancelled'));
+  });
 }
 
 export default {
   getAllParcels,
   getOneParcel,
   insertParcel,
+  cancelParcel,
 };
