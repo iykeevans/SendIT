@@ -34,4 +34,29 @@ describe('Test for All Parcel routes', () => {
       });
     });
   });
+
+  // test for inserting a parcel delivery order
+  describe('POST /parcels', () => {
+
+    const data = {
+      id: 1,
+      userId: 1,
+      pickupLocation: 'lagos',
+      destination: 'port harcourt',
+      status: 'true',
+    };
+
+    it('it should return success code 201', () => {
+      request(app).post('/api/v1/parcels')
+        .send(data)
+        .then((res) => {
+          expect(res.statusCode).to.equal(201);
+          expect(res.body).to.be.an('object');
+          expect(res.body).to.have.property('userId');
+        })
+        .catch((err) => {
+          expect(err.statusCode).to.equal(404);
+        });
+    });
+  });
 });

@@ -1,4 +1,4 @@
-//import ids from 'short-id';
+import ids from 'shortid';
 
 import db from '../database/db.json';
 import helper from '../helpers/helper';
@@ -18,7 +18,20 @@ const getOneParcel = id => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
+const insertParcel = (newParcel) => {
+  return new Promise((resolve) => {
+    const parcel = newParcel;
+    parcel.id = ids.generate();
+    parcel.userId = ids.generate();
+    parcel.status = true;
+    parcel.createdAt = helper.newDate();
+    db.push(newParcel);
+    resolve(newParcel);
+  });
+}
+
 export default {
   getAllParcels,
   getOneParcel,
+  insertParcel,
 };
