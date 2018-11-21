@@ -9,4 +9,23 @@ const checkItemExist = (database, id) => {
   });
 };
 
-export default { checkItemExist };
+const checkUserExist = (database, id) => {
+  return new Promise((resolve, reject) => {
+    const row = database.find(r => r.userId === Number(id));
+    if (!row) {
+      reject(new Error('ID is not valid'));
+    }
+    resolve(row);
+  });
+};
+
+const newDate = () => new Date().toString();
+
+const newPrice = () => Math.floor(Math.random() * 1000);
+
+export default {
+  checkItemExist,
+  checkUserExist,
+  newDate,
+  newPrice,
+};

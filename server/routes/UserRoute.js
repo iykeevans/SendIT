@@ -1,9 +1,8 @@
 import express from 'express';
+import users from '../controllers/UserController';
 
 const router = express.Router();
 
-router.get('/:id/parcels', (req, res) => {
-  res.status(200).json({ message: 'All user parcels comming through' });
-});
+router.get('/:id/parcels', users.getItems);
 
 export default router;
