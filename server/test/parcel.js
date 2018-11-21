@@ -4,7 +4,6 @@ const app = require('../app');
 
 describe('Test for All Parcel routes', () => {
   describe('Test for All GET routes', () => {
-
     // test for all parcel delivery order
     describe('GET /parcels', () => {
       it('it should return success code 200', () => {
@@ -53,6 +52,19 @@ describe('Test for All Parcel routes', () => {
           expect(res.statusCode).to.equal(201);
           expect(res.body).to.be.an('object');
           expect(res.body).to.have.property('userId');
+        })
+        .catch((err) => {
+          expect(err.statusCode).to.equal(404);
+        });
+    });
+  });
+
+  describe('PUT routes', () => {
+    it('should return the modified  parcel item', () => {
+      request(app).put('/api/v1/parcels/1/cancel')
+        .then((res) => {
+          expect(res.statusCode).to.equal(200);
+          expect(res.body).to.be.an('object');
         })
         .catch((err) => {
           expect(err.statusCode).to.equal(404);
