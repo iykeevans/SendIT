@@ -1,13 +1,12 @@
-import db from '../database/db.json';
-import helper from '../helpers/helper';
+import db from '../database/db';
 
-const getUserParcels = (id) => {
-  return new Promise((resolve, reject) => {
-    // check if object with id exists
-    helper.checkUserExist(db, id)
-      .then(data => resolve(data))
-      .catch(err => reject(err));
+const getUserParcels = id => new Promise((resolve, reject) => {
+  db.query('SELECT * FROM parcels WHERE id = $1', [id], (error, results) => {
+    if (error) {
+      reject(error);
+    }
+    resolve(results.rows);
   });
-};
+});
 
 export default { getUserParcels };

@@ -4,7 +4,12 @@ class Parcels {
   // gets all parcel items
   static getItems(req, res) {
     ParcelModel.getAllParcels()
-      .then(data => res.status(200).json(data))
+      .then((data) => {
+        if (!data) {
+        res.status(404).json({message: 'no data'});
+      }
+      res.status(200).json(data);
+      })
       .catch((err) => {
         if (err.status) {
           res.status(err.status).json({ message: err.message });

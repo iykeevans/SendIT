@@ -8,7 +8,7 @@ router.get('/', Parcels.getItems);
 
 router.get('/:id', Parcels.getItem);
 
-router.post('/', middleware.checkFieldsPost, Parcels.addItem);
+router.post('/', Parcels.addItem);
 
 router.put('/:id/cancel', Parcels.cancelItem);
 
